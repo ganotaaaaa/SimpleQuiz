@@ -1,0 +1,26 @@
+@charset "UTF-8";
+html {
+    font-size: 62.5%;
+}
+.wrap {
+    width: min(600px,90%);
+    margin: 0 auto;
+}
+.question {
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 9999px;
+    background-color: aqua;
+}
+.choices {
+    margin-top: 30px;
+    font-size: 1.6rem;
+}
+.choices-name {
+    padding: 5px;
+    border-radius: 9999px;
+    background-color: beige;
+}
+.choices-name:not(:first-of-type) {
+    margin-top: 20px;
+}
