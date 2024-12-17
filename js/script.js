@@ -1,14 +1,22 @@
-const questionName = document.getElementById("js-question-name");
-const questionAnswers = document.querySelectorAll(".js-questions-name");
+import { datas } from "./data.js";
+
+const questionName = document.getElementById("js-questions");
+const questionChoices = document.querySelectorAll(".js-choices");
 
 const questionNum = Math.floor(Math.random() * datas.length);
+//問題の情報が入ったオブジェクトをランダムで抽出して、questionsに代入。
 const questions = datas[questionNum];
-// const questionsArray = Object.values(questions);
-// for (let i = 0; i < questionAnswers.length; i++) {
-//     const questionAnswer = questionAnswers[i];
-//     questionAnswer.textContent = questionsArray[i];
-// }
+
+const displayQuiz = () => {
+    for (let i = 0; i < questionChoices.length; i++) {
+        const questionChoice = questionChoices[i];
+        questionName.textContent = questions.question;
+        for (let j = 0; j < questions.choices.length; j++) {
+            questionChoice.textContent = questions.choices[i];
+        }
+    }
+}
 
 
 
-// window.addEventListener
+window.addEventListener("load", displayQuiz);

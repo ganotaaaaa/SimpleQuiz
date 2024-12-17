@@ -1,4 +1,4 @@
-const datas = [
+export const datas = [
     {
         question: "日本の首都はどこですか？",
         choices: ["大阪", "京都", "東京", "福岡"],
