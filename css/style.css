@@ -4,13 +4,25 @@ html {
 }
 .wrap {
     width: min(600px,90%);
-    margin: 0 auto;
+    margin: 40% auto 0;
 }
 .question {
     padding: 5px;
     font-size: 2rem;
     border-radius: 9999px;
     background-color: aqua;
+}
+.question-num {
+    display: grid;
+    place-items: center;
+    max-width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 9999px;
+    background-color: blue;
+}
+.question-num p {
+    font-size: 2.4rem;
+    color: aliceblue;
 }
 .choices {
     margin-top: 30px;
@@ -19,8 +31,27 @@ html {
 .choices-name {
     padding: 5px;
     border-radius: 9999px;
-    background-color: beige;
+    background-color: blueviolet;
+    color: aliceblue;
+    cursor: pointer;
 }
 .choices-name:not(:first-of-type) {
     margin-top: 20px;
+}
+.correct-box {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2.4rem;
+}
+.next-question {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 2rem;
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 9999px;
+    opacity: 0;
+    transition: 0.3s;
 }
